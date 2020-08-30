@@ -1,6 +1,6 @@
 # mobile
 
-A new Flutter project.
+Mobile application for a full stack shopping application.
 
 ## Getting Started
 
