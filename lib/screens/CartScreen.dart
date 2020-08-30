@@ -84,15 +84,16 @@ class CartScreenState extends State<CartScreen> {
     return Padding(
       padding: EdgeInsets.only(right: 12.0),
       child: Badge(
-        badgeContent: Text("10"),
-        child: IconButton(
-            icon: Icon(
-              Icons.settings,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.pushNamed(context, SettingsScreen.routeName);
-            }),
+        padding: EdgeInsets.all(3.0),
+        badgeColor: Colors.green,
+        badgeContent: Text(
+          "10",
+          style: TextStyle(fontSize: 12.0),
+        ),
+        child: Icon(
+          Icons.shopping_cart,
+          color: Colors.white,
+        ),
       ),
     );
   }
