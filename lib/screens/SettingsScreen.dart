@@ -11,17 +11,6 @@ class SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(
         title: Text("Settings"),
         centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 12.0),
-            child: IconButton(
-                icon: Icon(
-                  Icons.settings,
-                  color: Colors.white,
-                ),
-                onPressed: () {}),
-          ),
-        ],
       ),
       body: Container(
         child: Text("Settings"),

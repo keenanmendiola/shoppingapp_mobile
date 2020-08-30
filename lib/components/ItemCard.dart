@@ -75,7 +75,6 @@ class ItemCardState extends State<ItemCard> {
   increment() {
     setState(() {
       count++;
-      print(count);
     });
   }
 
