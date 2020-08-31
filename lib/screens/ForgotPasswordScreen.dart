@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/screens/RegistrationScreen.dart';
 import 'package:mobile/screens/LoginScreen.dart';
+import '../utilities/constants.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   static String routeName = '/forgotpassword';
@@ -14,7 +15,7 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Forgot Password"),
+          title: kForgotPasswordScreenAppBarTitle,
           centerTitle: true,
         ),
         body: Container(
@@ -52,8 +53,8 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
             ),
             suffixIcon: Icon(Icons.email),
-            labelText: "Email Address",
-            hintText: "Enter a valid email address."),
+            labelText: kEmailFieldLabelText,
+            hintText: kEmailFieldHintText),
       ),
     );
   }
@@ -71,7 +72,7 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           ),
           onPressed: () {},
           child: Text(
-            "Send Email",
+            kForgotPasswordScreenButtonText,
             style: Theme.of(context).textTheme.bodyText2,
           ),
         ));
@@ -83,7 +84,7 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           Navigator.pushReplacementNamed(context, LoginScreen.routeName);
         },
         child: Text(
-          "Login",
+          kLoginButtonText,
           style: Theme.of(context).textTheme.bodyText2,
         ));
   }
@@ -94,7 +95,7 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           Navigator.pushReplacementNamed(context, RegistrationScreen.routeName);
         },
         child: Text(
-          "Register",
+          kRegisterButtonText,
           style: Theme.of(context).textTheme.bodyText2,
         ));
   }

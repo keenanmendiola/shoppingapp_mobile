@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile/screens/CartScreen.dart';
 import 'package:mobile/screens/ForgotPasswordScreen.dart';
 import 'package:mobile/screens/RegistrationScreen.dart';
+import '../utilities/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   static String routeName = '/';
@@ -16,7 +17,7 @@ class LoginScreenState extends State<LoginScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Login"),
+          title: kLoginScreenAppBarTitle,
           centerTitle: true,
         ),
         body: Container(
@@ -53,8 +54,8 @@ class LoginScreenState extends State<LoginScreen> {
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
             suffixIcon: Icon(Icons.email),
-            labelText: "Email Address",
-            hintText: "Enter a valid email address."),
+            labelText: kEmailFieldLabelText,
+            hintText: kEmailFieldHintText),
       ),
     );
   }
@@ -75,8 +76,8 @@ class LoginScreenState extends State<LoginScreen> {
             ),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
-            labelText: "Password",
-            hintText: "Enter password."),
+            labelText: kPasswordFieldLabelText,
+            hintText: kPasswordFieldHintText),
       ),
     );
   }
@@ -100,7 +101,7 @@ class LoginScreenState extends State<LoginScreen> {
             Navigator.pushReplacementNamed(context, CartScreen.routeName);
           },
           child: Text(
-            "Login",
+            kLoginButtonText,
             style: Theme.of(context).textTheme.bodyText2,
           ),
         ));
@@ -113,7 +114,7 @@ class LoginScreenState extends State<LoginScreen> {
               context, ForgotPasswordScreen.routeName);
         },
         child: Text(
-          "Forgot Password?",
+          kForgotPasswordButtonText,
           style: Theme.of(context).textTheme.bodyText2,
         ));
   }
@@ -124,7 +125,7 @@ class LoginScreenState extends State<LoginScreen> {
           Navigator.pushReplacementNamed(context, RegistrationScreen.routeName);
         },
         child: Text(
-          "Register",
+          kRegisterButtonText,
           style: Theme.of(context).textTheme.bodyText2,
         ));
   }

@@ -17,8 +17,8 @@ void main() {
         ),
       ),
       textTheme: TextTheme(
-        headline1: TextStyle(fontSize: 72.0, color: Colors.white),
-        headline6: TextStyle(fontSize: 36.0, color: Colors.white),
+        headline1: TextStyle(fontSize: 25.0, color: Colors.white),
+        headline6: TextStyle(fontSize: 18.0, color: Colors.white),
         bodyText2: TextStyle(fontSize: 15.0, color: Colors.white),
       ),
     ),

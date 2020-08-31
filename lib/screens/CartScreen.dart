@@ -3,6 +3,7 @@ import 'package:mobile/components/ItemList.dart';
 import 'package:mobile/screens/CheckoutScreen.dart';
 import 'package:mobile/screens/SettingsScreen.dart';
 import 'package:badges/badges.dart';
+import '../utilities/constants.dart';
 
 class CartScreen extends StatefulWidget {
   static String routeName = "/cart";
@@ -21,7 +22,7 @@ class CartScreenState extends State<CartScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Store Name"),
+          title: kCartScreenAppBarTitle,
           centerTitle: true,
           actions: [
             Padding(
@@ -42,7 +43,7 @@ class CartScreenState extends State<CartScreen> {
               ),
               Tab(
                 icon: Icon(Icons.camera),
-                text: "Scanner",
+                text: kCartScreenTabBarText,
               ),
             ],
           ),
@@ -60,7 +61,7 @@ class CartScreenState extends State<CartScreen> {
 
   FloatingActionButton _checkoutButton() {
     return FloatingActionButton.extended(
-      label: Text("Checkout"),
+      label: kCartScreenFloatingActionButtonLabel,
       onPressed: _navigateToCheckout,
       icon: Icon(
         Icons.credit_card,

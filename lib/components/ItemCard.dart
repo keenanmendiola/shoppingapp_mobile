@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile/components/Counter.dart';
 import 'package:mobile/models/storeItem.dart';
 import 'package:mobile/screens/ItemDetailsScreen.dart';
+import '../utilities/constants.dart';
 
 class ItemCard extends StatefulWidget {
   final StoreItem storeItem;
@@ -47,11 +48,13 @@ class ItemCardState extends State<ItemCard> {
                 width: 10.0,
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(widget.storeItem.itemName),
-                  Text("Items in cart: ${widget.storeItem.count}"),
-                  Text("Price per unit: Php ${widget.storeItem.pricePerUnit}"),
+                  Text("$kItemCardItemCountText ${widget.storeItem.count}"),
+                  Text(
+                      "$kItemCardPricePerUnitText ${widget.storeItem.pricePerUnit}"),
                 ],
               ),
               Counter(

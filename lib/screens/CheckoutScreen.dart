@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utilities/constants.dart';
 
 class CheckoutScreen extends StatefulWidget {
   static String routeName = "/checkout";
@@ -9,7 +10,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Checkout"),
+        title: kCheckoutScreenAppBarTitle,
         centerTitle: true,
       ),
       body: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utilities/constants.dart';
 
 class SettingsScreen extends StatefulWidget {
   static String routeName = "/settings";
@@ -9,7 +10,7 @@ class SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Settings"),
+        title: kSettingsScreenAppBarTitle,
         centerTitle: true,
       ),
       body: Container(

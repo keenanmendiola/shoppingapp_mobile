@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/screens/ForgotPasswordScreen.dart';
 import 'package:mobile/screens/LoginScreen.dart';
+import '../utilities/constants.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static String routeName = '/registration';
@@ -16,7 +17,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Register"),
+          title: kRegistrationScreenAppBarTitle,
           centerTitle: true,
         ),
         body: Container(
@@ -59,8 +60,8 @@ class RegistrationScreenState extends State<RegistrationScreen> {
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
             suffixIcon: Icon(Icons.person),
-            labelText: "First Name",
-            hintText: "Enter your first name."),
+            labelText: kFirstNameFieldLabelText,
+            hintText: kFirstNameFieldHintText),
       ),
     );
   }
@@ -74,8 +75,8 @@ class RegistrationScreenState extends State<RegistrationScreen> {
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
             suffixIcon: Icon(Icons.person),
-            labelText: "Last Name",
-            hintText: "Enter your last name."),
+            labelText: kLastNameFieldLabelText,
+            hintText: kLastNameFieldHintText),
       ),
     );
   }
@@ -89,8 +90,8 @@ class RegistrationScreenState extends State<RegistrationScreen> {
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
             suffixIcon: Icon(Icons.email),
-            labelText: "Email Address",
-            hintText: "Enter a valid email address."),
+            labelText: kEmailFieldLabelText,
+            hintText: kEmailFieldHintText),
       ),
     );
   }
@@ -113,8 +114,8 @@ class RegistrationScreenState extends State<RegistrationScreen> {
             ),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
-            labelText: "Password",
-            hintText: "Enter password."),
+            labelText: kPasswordFieldLabelText,
+            hintText: kPasswordFieldHintText),
       ),
     );
   }
@@ -137,8 +138,8 @@ class RegistrationScreenState extends State<RegistrationScreen> {
             ),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
-            labelText: "Confirm Password",
-            hintText: "Enter password."),
+            labelText: kConfirmPasswordFieldLabelText,
+            hintText: kPasswordFieldHintText),
       ),
     );
   }
@@ -156,7 +157,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
           ),
           onPressed: () {},
           child: Text(
-            "Register",
+            kRegisterButtonText,
             style: Theme.of(context).textTheme.bodyText2,
           ),
         ));
@@ -169,7 +170,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
               context, ForgotPasswordScreen.routeName);
         },
         child: Text(
-          "Forgot Password?",
+          kForgotPasswordButtonText,
           style: Theme.of(context).textTheme.bodyText2,
         ));
   }
@@ -180,7 +181,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
           Navigator.pushReplacementNamed(context, LoginScreen.routeName);
         },
         child: Text(
-          "Login",
+          kLoginButtonText,
           style: Theme.of(context).textTheme.bodyText2,
         ));
   }

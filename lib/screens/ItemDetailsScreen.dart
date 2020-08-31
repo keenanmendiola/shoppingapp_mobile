@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/models/storeItem.dart';
+import '../utilities/constants.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
   final StoreItem storeItem;
@@ -9,40 +10,48 @@ class ItemDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Item Details"),
+        title: kItemDetailsScreenAppBarTitle,
         centerTitle: true,
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.network(storeItem.imageUrl),
             SizedBox(height: 20.0),
-            itemNameText(context),
+            _itemImage(),
             SizedBox(height: 20.0),
-            itemCountText(context),
+            _itemNameText(context),
             SizedBox(height: 20.0),
-            itemDescriptionText(context),
+            _itemCountText(context),
+            SizedBox(height: 20.0),
+            _itemDescriptionText(context),
           ],
         ),
       ),
     );
   }
 
-  Text itemNameText(context) {
+  Container _itemImage() {
+    return Container(
+      child: Image.network(storeItem.imageUrl),
+    );
+  }
+
+  Text _itemNameText(context) {
     return Text(
       storeItem.itemName,
       style: Theme.of(context).textTheme.headline1,
     );
   }
 
-  Text itemCountText(context) {
+  Text _itemCountText(context) {
     return Text(
-      "Number of items in cart ${storeItem.count}",
+      "$kItemDetailsScreenItemCountText ${storeItem.count}",
       style: Theme.of(context).textTheme.headline6,
     );
   }
 
-  Text itemDescriptionText(context) {
+  Text _itemDescriptionText(context) {
     return Text(
       storeItem.description,
       style: Theme.of(context).textTheme.bodyText2,
